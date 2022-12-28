@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ff--Fraunces {
+    font-family: 'Fraunces', serif;
+}
+
+.ff--montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    padding: 1rem;
+    background-color: var(--Cream);
+    user-select: none;
+}
+
+.header {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 20px auto;
+    min-width: 449px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: var(--White);
+    gap: 1rem;
+
+}
+
+.desktop__picture {
+    display: none;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--Darkgrayishblue);
+}
+
+.title {
+    color: var(--Verydarkblue);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.paragraph {
+    color: var(--Darkgrayishblue);
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.prices {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.prices p:nth-child(1) {
+    font-size: 2rem;
+    color: var(--Darkcyan);
+}
+
+.prices p:nth-child(2) {
+    color: var(--Darkgrayishblue);
+    text-decoration: line-through;
+}
+
+.little__car {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    background-color: var(--Darkcyan);
+    border-radius: 10px;
+    border: none;
+    gap: 1rem;
+}
+
+.little__car span {
+    font-weight: bold;
+    color: var(--White);
+}
+
+.little__car:hover {
+    cursor: pointer;
+}
+
+.little__car:active {
+    transform: translateY(2px);
+}
+
+@media (min-width: 450px) {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 685px;
+        min-width: 685px;
+    }
+
+    .mobile__picture {
+        display: none;
+    }
+
+    .desktop__picture {
+        display: block;
+    }
+}
